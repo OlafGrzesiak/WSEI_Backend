@@ -4,6 +4,7 @@ namespace WebAPI.DTO;
 
 public class QuizItemDTO
 {
+    private static Random rand = new Random();
     public int Id { get; set; }
     public string Question { get; set; }
     public List<string> Options { get; set; }
@@ -14,6 +15,8 @@ public class QuizItemDTO
         {
             item.CorrectAnswer
         };
+        
+        options.Sort((a,b) => 1 - rand.Next(3));
         
         return new QuizItemDTO()
         {

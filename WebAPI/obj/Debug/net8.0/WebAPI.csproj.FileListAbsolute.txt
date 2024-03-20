@@ -257,3 +257,4 @@ D:\Users\olaf.grzesiak\Desktop\wsei-backend-lab-lab-01\WebAPI\bin\Debug\net8.0\I
 D:\Users\olaf.grzesiak\Desktop\wsei-backend-lab-lab-01\WebAPI\bin\Debug\net8.0\Web.dll
 D:\Users\olaf.grzesiak\Desktop\wsei-backend-lab-lab-01\WebAPI\bin\Debug\net8.0\Web.pdb
 D:\Users\olaf.grzesiak\Desktop\wsei-backend-lab-lab-01\WebAPI\bin\Debug\net8.0\Infrastructure.pdb
+D:\Users\olaf.grzesiak\Desktop\wsei-backend-lab-lab-01\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json
