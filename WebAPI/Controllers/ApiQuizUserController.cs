@@ -1,4 +1,5 @@
-﻿using BackendLab01;
+﻿using ApplicationCore.Exceptions;
+using BackendLab01;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
 
@@ -27,8 +28,18 @@ public class ApiQuizUserController : ControllerBase
     [Route("{quizId}/items/{itemId}/answers")]
     public ActionResult SaveAnswear(int quizId, int itemId, AnswerDTO dto)
     {
-        _service.SaveUserAnswerForQuiz(quizId, 1, itemId, dto.answer);
-        return Created();
+        try
+        {
+            _service.SaveUserAnswerForQuiz(quizId, 1, itemId, dto.answer);
+            return Created();
+        }
+        catch (DuplicateAnswerException)
+        {
+            return new BadRequestObjectResult(new
+            {
+                Error = e.Message
+            });
+        }
     }
 
     [HttpGet]
