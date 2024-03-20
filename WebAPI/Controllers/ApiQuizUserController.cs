@@ -16,8 +16,9 @@ public class ApiQuizUserController : ControllerBase
 
     [HttpGet]
     [Route("{id}")]
-    public Quiz? FindQuizById(int id)
+    public ActionResult<Quiz> FindQuizById(int id)
     {
-        return _service.FindQuizById(id);
+        var quiz = _service.FindQuizById(id);
+        return quiz is null ? NotFound() : quiz;
     }
 }
